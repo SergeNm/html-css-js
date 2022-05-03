@@ -1,6 +1,7 @@
 # techupchallenge
-This challenge has two questions: \n
-By Using HTML and CSS, create a web page that replicates the given UI. Then, using JavaScript for data structure questions 
+- This challenge has two questions
+- By Using HTML and CSS, create a web page that replicates the given UI. 
+- Then, using JavaScript for data structure questions 
 
 ## How to Test/Run?
 1. for **Q1.**  Clone this repository and open **index.html** to see the web page
