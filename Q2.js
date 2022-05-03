@@ -9,6 +9,7 @@ const item = [
   { name: "Phone", price: 500 },
   { name: "Computer", price: 1000 },
 ];
+console.log("Given item:", item);
 
 // 1. Filter and show the Cheap product
 const cheapestProduct = (item) => {
@@ -28,7 +29,10 @@ console.log("\n The expensive product among item is", expensiveProduct(item));
 
 //Calculate the full price of all product combined
 allProductPrice = (item) => item.reduce((sum, el) => sum + el.price, 0);
-console.log("\n The full price of all product combined is", allProductPrice(item));
+console.log(
+  "\n The full price of all product combined is",
+  allProductPrice(item)
+);
 
 //Calculate the full price of all product combined and remove product that are under the 10 dolla
 customAllProductPrice = (item) => {

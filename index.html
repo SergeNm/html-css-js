@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>TechUpSkills</title>
-  </head>
-  <body>
-    <section id="contact" class="form">
-      <img alt="logo" src="./images/logo.png" />
-      <div class="form-content">
-        <div class="section-header">
-          <p>Fill the form.</p>
-          <p>It's easy.</p>
-        </div>
 
-        <div class="contact-wrapper">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>TechUpSkills</title>
+</head>
+
+<body>
+  <section id="contact" class="form">
+    <div class="logo"><img alt="logo" src="./images/logo.png" /></div>
+    <div class="container">
+      <div class="section-header">
+        <p>Fill the form.</p>
+        <p>It's easy.</p>
+      </div>
+
+      <div class="form-content">
+        <div class="inner-container">
           <!-- Left contact page -->
 
-          <form id="contact-form" class="form-horizontal" role="form">
-            <div class="fields-container">
-              <div class="group half-input">
+          <form class="left-side" role="form">
+            <div class="first-last-name-inputs">
+              <div class="group">
                 <input type="text" required />
                 <span class="highlight"></span>
                 <span class="bar"></span>
-                <label>Name</label>
+                <label>First name</label>
               </div>
 
-              <div class="group half-input">
+              <div class="group">
                 <input type="text" required />
                 <span class="highlight"></span>
                 <span class="bar"></span>
-                <label>Email</label>
+                <label>Last name</label>
               </div>
             </div>
             <div class="group">
               <input type="text" required />
               <span class="highlight"></span>
               <span class="bar"></span>
-              <label>Name</label>
+              <label>Email</label>
             </div>
             <div class="form-text">
               Briefly tell us about your project and your current goals.<br />
@@ -54,7 +57,7 @@
           </form>
 
           <!-- Right contact page -->
-          <div class="more-info">
+          <div class="right-side">
             <div class="form-text">
               <h2>
                 Need<br />
@@ -63,20 +66,21 @@
 
               <p>
                 you like what we do but you need to demonstrate your team as
-                well. Easy! Directly download, print or share the link to a PDF
-                with your colleagues
+                well. Easy! Directly download, print or share the link to a
+                PDF with your colleagues
               </p>
             </div>
 
             <div class="download">
               <a class="download-link" href="#">
-                <img src="./images/download.svg" width="20px" /> <span>Company
-                profile.pdf (32 mb.)</span></a
-              >
+                <img src="./images/download.svg" width="20px" />
+                <span>Company profile.pdf (32 mb.)</span></a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+</body>
+
 </html>
