@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #000;
+  background: url('./images//back-image.jpg');
+  background-size: cover;
+}
+
+.form {
+  background: url('./images/form-back.jpg');
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(50vh - 220px) auto;
+  padding: 20px 30px;
+  max-width: calc(80vw - 40px);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+.section-header {
+  padding-left: 7vw;
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 6px;
+  align-self: baseline;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 80%
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-horizontal{
+  padding: 1.5em 8em 1em 0 ;
+}
+
+.button-one {
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  font-size:14px;
+  background-color: #ff8d5e;
+  border: none;
+  padding: 10px;
+  width: 120px;
+  transition: all 0.5s;
+}
+
+.button-one:hover {
+  cursor: pointer;
+  background-color:#d35400;
+}
+
+.download{
+  padding-top:2em ;
+}
+.download-link {
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+.download-link span{
+  padding-left: .8em;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.fields-container{
+    display: flex;
+    gap: 2em;
+    
+}
+
+/* form starting stylings ------------------------------- */
+.group 			  { 
+    position:relative; 
+    margin-bottom:45px; 
+  }
+  .half-input input{
+      width: 100%;
+  }
+  input 				{
+    font-size:12px;
+    padding:8px 8px 10px 5px;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  label 				 {
+    color:#000; 
+    font-size:12px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    top:8px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top:-17px;
+    font-size:12px;
+    color:#5264AE;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar 	{ position:relative; display:block; width:100%; }
+  .bar:before, .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+
+  .more-info{
+    border-left:  1px solid rgba(85, 85, 85, 0.25);
+    padding-left: 3em;
+    padding-top: 1.5em;
+    width: 50%;
+  }
+
+  .form-text h2{
+    padding-bottom: 1.3em;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .more-info,
+  .form-horizontal {
+    margin: 0 auto;
+  }
+
+  .more-info {
+    margin-top: 60px;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .more-info,
+  .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }
+  .form-control,
+  textarea {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}
